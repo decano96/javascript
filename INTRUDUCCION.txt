@@ -1,0 +1,3426 @@
+#¿QUE ES JAVASCRIPT?
+ES UN LENGUAJE DE PROGRAMACION  QUE NOS PERMITE DAR INTRUCCIONES 
+A UN ORDENADOR A TRAVEZ DE UN ORDENADOR, CODIGO QUE ESTA ESTRUCTURADO
+PARA QUE NOSOTROS LOS PROGRAMADORES PUEDAMOS ESCRIBIRLO SIGUIENDO UNA
+LOGICA DE PROGRAMACION PARA QUE CUANDO SE COMPLETE DICHO CODIGO PUEDA CUMPLIR 
+LA FUNCION QUE NOSOTTROS QUEREMOS.
+
+*LENGUAJE DE PROGRAMACION.
+
+*INTERPRETADO. ---> JAVASCRIPT , HTML, CSS, ETC
+
+*ORIENTADO A OBJETOS.--->SIGNIFICA QUE ES UN LENGUAJE EN DONDE SU ESTRUCTURA
+ ABARCA TODA LAS CARACTERISTICAS ORIENTADA A OBJETOS.
+
+*IMPERATIVO.---> SE REFIERE A QUE TODAS LAS INTRUCCIONES SE EJECUTAN EN LINEA.
+
+*CASE SENSITIVE / instancias / classless.-->SIGNIFICA QUE ES SENCIBLE A MAYUSCULAS Y MINUSCULAS.
+
+*TIPADO DEBIL.----> SIGNIFICA QUE EL VALR DE LAS VARIABLES PUEDE CAMBIAR 
+A LO LARGO DEL TIEMPO.
+
+*LENGUAJE DINAMICO.--->SIGNIFICA QUE LA VARIABLE NO SE AJUSTA AL DATO SINO QUE
+EL DATO SE AJUSTA A LA VARIABLE.
+
+*ECMASCRIPT(5.6.7.8.9) TECNOLOGIA EN LA QUE SE COMPONE JAVASCRIPT.
+
+--------------------------------------------------------------------------------------------------------------------
+
+*FORMAS DE ENLAZAR JAVASCRIPT:
+
+*EN LINEA:
+
+       <h1 onclick="alert("hola")">hola mundo</h1>
+
+*como contenido de etiqueta:
+                
+                     <script type="text/javascript">
+		      alert("hola")
+	             </script>
+
+*como contenido en un archivo de forato .js
+*con un require.
+
+-----------------------------------------------------------------------------------
+
+*VARIABLES (Datos primitivos)
+
+es un espacio que se guarda en memoria.
+
+*concepto
+*ejemplo
+*tipos de datos: 
+ # string(cadena de texto): string "cadena de texto"
+ # number: 19
+ # boolean: true false
+ # symbol.
+
+ *Casos especiales de datos: 
+ 
+#undefinet; Una variable a la que no se le ha asignado valor,
+o no se ha declarado en absoluto (no se declara, no existe) son de tipo undefined.
+Un método o sentencia también devuelve undefined si la variable que se está evaluando
+no tiene asignado un valor.
+            
+             let numero; 
+             alert(numero)
+ 
+#null: El valor null es un literal de Javascript que 
+representa intencionalmente un valor nulo o "vacío".
+      
+      let numero = null;
+
+#nan: NaN es una propiedad del global object (objeto global), por ejemplo, es una variable de alcance global. 
+El valor inicial de NaN es Not-A-Number (No es Un Número) - lo mismo que el valor de Number.
+      
+      let numero = 5;
+      let numero2 = "pedro";
+
+      alert(numero * numero2)
+ 
+*scope: El scope puede definirse como el alcance que una variable tendrá en tu código. 
+En otras palabras, el scope decide a qué variables tienes acceso en cada parte del código. 
+Existen dos tipos de scope, el scope global y el scope local. (var y let)
+
+*hoisting: Hosting, o elevación es el comportamiento por defecto de 
+JavaScript de “mover declaraciones al principio” del código
+
+*tipos de variable(let, var y const):
+
+#vart--->
+#let--> let numero = 30
+        alert(numero)
+
+#const-->const numero = 30 ----> en este eejemplo no se puede modificar la constante.
+         alert(numero)
+
+*crear multiples variables(separandolas con coma)--> let nombre1 = "jorge", nombre2:
+
+let numero, numero2, numero3;
+
+numero = 10;
+numero2= 40;
+numero3= 20;
+
+alert(numero);
+alert(numero2);
+alert(numero3);
+
+*Pruebas con prompt:prompt() muestra un diálogo con mensaje opcional, 
+que solicita al usuario que introduzca un texto.
+
+     let nombre = prompt("dime tu nombre");
+
+     alert("hola " + nombre);
+
+--------------------------------------------------------------------------------------------------
+
+ #OPERADORES EN JAVASCRIPT:
+
+*OPERADORES DE ASIGNACION: ASIGNA UN VALOR AL OPERANDO DE LA IZQUIERDA BASADO EN EL VALOR DEL 
+OPERANDO DE LA DERECHA.
+
+Nombre	Operador abreviado	Significado
+Asignación de adición	x += y	x = x + y
+Asignación de resta	x -= y	x = x - y
+Asignación de multiplicación	x *= y	x = x * y
+Asignación de división	x /= y	x = x / y
+
+OPERADORES ARITMETICO: toman valores numéricos(ya sean literales o variables) como sus operandos
+y retoman un valor numerico unico.
+
+Operador	Nombre	Propósito
++	Adición	Suma dos números juntos.
+-	Resta	Resta el numero de la derecha del de la izquierda.
+*	Multiplicación	Multiplica dos números juntos.
+/	División	Divide el número de la izquierda por el de la derecha.
+
+---------------------------------------------------------------------------------------------------------
+
+# Concatenización:
+
+*definicion y ejemplo:
+
+Concatenación es el proceso de anexar una cadena al final de otra cadena. 
+Las cadenas se concatenan con el operador +.
+En el caso de los literales y las constantes de cadena, 
+la concatenación se produce en tiempo de compilación, y no en tiempo de ejecución.
+     
+saludo = "¡hola pedro!";
+
+pregunta = "¿como estas?";
+
+frase = saludo + pregunta;
+
+document.write(frase);
+
+*con el signo +.
+
+*Para numeros formamos string (" + 9 + 4).
+numero1 = 5;
+
+numero2 = 8;
+
+frase = "" + numero1 + numero2 ;
+
+document.write(frase)
+
+*con concat: Concatenación es el proceso de anexar una cadena al final de otra cadena. 
+Las cadenas se concatenan con el operador +.
+En el caso de los literales y las constantes de cadena,
+la concatenación se produce en tiempo de compilación, y no en tiempo de ejecución.
+
+       numero1 = "53";
+
+       numero2 = 8;
+
+       frase = numero1.concat(numero2) ;
+
+       document.write(frase)
+
+*con backtiks y la variable entre ${}.
+
+
+nombre = "decanp96";
+
+frase = `soy ${nombre} y estoy programando`;
+
+document.write(frase);
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+# BACKTIKS (BLOQUEO O ACENTO GRAVE) Y ESCAPE
+
+*SIN BACKTIKS "LINEA 1/N
+                       LINEA2"
+*CON BACKTIKS "LINEA 1
+                      LINEA2"
+
+  nombre = "decanp96";
+
+  frase = "mi nombre es ´decano´ y soy un crack";
+
+  document.write(frase);
+-------------------------------------------------------------------
+
+*ESCAPES DE COMILLAS dobles
+
+  nombre = "decanp96";
+
+  frase = "mi nombre es 'decano' y soy un crack";
+
+  document.write(frase);
+
+*ESCAPES DE COMILLAS simples
+
+  nombre = "decanp96";
+
+  frase = 'mi nombre es "decano" y soy un crack';
+
+  document.write(frase);
+
+===================================================================================================================
+------------------------------------------------------------------------------------------------------------------
+
+  # OPERADORES (INTERMEDIOS)
+   
+*OPERADORES LOGICOS:
+
+Los operadores lógicos comparan valores booleanos y devuelven respuestas booleanas.
+Hay dos tipos de operadores lógicos AND y OR.
+Estos operadores por lo general se escriben && (AND) y || (OR).
+
+Hay cuatro operadores lógicos en JavaScript: || (O), && (Y), !
+...
+AND “&&” encuentra el primer valor falso
+Evalúa los operandos de izquierda a derecha.
+Para cada operando, los convierte a un booleano. ...
+Si todos los operandos han sido evaluados (todos fueron valores verdaderos), 
+retorna el último operando.
+
+
+let valor = true
+
+let valor = true
+
+
+let resultado = valor && valor2;
+
+let resultado = valor || valor2;
+
+let resultado = !valor;
+
+
+document.write(resultado)
+
+document.write(true && true) -----> true.
+
+document.write(false && true)----> false.
+
+document.write(true && true) ---> false.
+
+
+num1 = 12;
+
+num2 = 20;
+
+afirmación1 = num1 > num2;
+
+afirmación2 = num1 != num2;
+
+document.write(afirmación1 && afirmación2)
+
+
+num1 = 12;
+
+num2 = 20;
+
+afirmación1 = num1 > num2;
+
+afirmación2 = num1 == num2;
+
+document.write(afirmación1 || afirmación2)
+
+
+
+num2 = 20;
+
+afirmación1 = num1 > num2;
+
+afirmación2 = num1 == num2;
+
+document.write(!afirmación1) -----> con estes signo cambia el valor del ejemplo.
+
+
+num1 = 12;
+num2 = 20;
+num3 = 32;
+num4 = 23;
+num5 = 34; 
+
+op = (num5 > num2 && num4 < num3) || (!(num1 === num2) || num3 != num3 )
+
+document.write(op)
+
+
+------------------------------------------------------------------------------------------------
+
+*OPERADORES DE COMPARACIÓN: 
+
+Los operadores de comparación comparan dos expresiones y 
+devuelven un Boolean valor que representa la relación de sus valores. 
+Hay operadores para comparar valores numéricos, 
+operadores para comparar cadenas y operadores para comparar objetos.
+(TRUE Y FALSE).
+
+Operador	Descripción
+
+Igual ( == )	Devuelve true si los operandos son iguales.
+No es igual ( != )  Devuelve true si los operandos no son iguales.
+Estrictamente igual ( === )  Devuelve true si los operandos son iguales y del mismo tipo. 
+                             Consulta también Object.is y similitud en JS.
+mayor(>)
+menor(<)
+mayor igual o menor igual(>=, <=)
+
+let numero1 = 23;
+
+let numero2 = 30;
+
+document.write(numero1 == numero2) ---> (FALSE)
+---------------------------------------------------
+let numero1 = 23;
+
+let numero2 = 23;
+
+document.write(numero1 == numero2)-----> (TRUE)
+
+
+=============================================================================================================================
+
+ # CAMEL CASE:
+ 
+* DEFINICION:
+CamelCase es un estilo de escritura que se aplica a frases o palabras compuestas.
+El nombre se debe a que las mayúsculas a lo largo de una palabra en CamelCase se asemejan a las jorobas de un camello.
+El nombre CamelCase se podría traducir como Mayúsculas/Minúsculas Camello.
+
+*USOS:
+La notación Camel Case combina las palabras directamente, sin usar ningún símbolo, 
+estableciendo que la primera letra de cada palabra esté en mayúscula a excepción de la primera palabra, 
+estando el resto de letras en minúsculas
+
+*EJEMPLOS
+
+parseInt()
+document.getElementsByTagName('')
+getAttention()
+
+---------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------
+
+# CONDICIONANTES Y USOS:
+
+*IF
+
+if (true) {
+	alert("hola") ------> esta condicion se ejecuta.
+}
+
+if (false) {
+	alert("hola") -------> esta condición no se ejecuta.
+}
+
+*ELSE IF ---> esta condición se puede aplicar cuantas veces quieramos.
+
+nombre = "vic decano96"
+
+
+if (nombre == vic) {
+	alert("tu nombre es " + nombre)
+}
+
+else if (nombre == decano96) {
+	alert("tu nombre es " + nombre) ----> con este ejemplo no se ejecuta ninguna acción.
+}
+
+---------------------------
+nombre = "vic"
+
+
+if (nombre == "vic") {
+	alert("tu nombre es " + nombre)
+}
+
+else if (nombre == "decano96") {
+	alert("tu nombre es " + nombre)  -----> en este ejemplo se ejecuta el primer bucle.
+}
+
+--------------------------------
+
+nombre = "decano96"
+
+
+if (nombre == "vic") {
+	alert("tu nombre es " + nombre)
+}
+
+else if (nombre == "decano96") {
+	alert("tu nombre es " + nombre) -----> ene este ejemplo se ejecuta el segundo bucle.
+}
+
+
+*ELSE
+
+nombre = "master"
+
+
+if (nombre == "vic") {
+	alert("tu nombre es " + nombre)
+}
+
+else if (nombre == "decano96") {
+	alert("tu nombre es " + nombre)
+}
+
+else {
+	alert("tu nombre es otro")  -------> si no se cumple ninguna de las condiciones anteriores se aplica 
+}                                            la condicion ELSE.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+# EJERCICIOS:
+
+*3 chicos de 23 años perfectamente normales entran a una eladeria a comprar helado pero hay un problema :
+los precios no estan al lado de cada estante con su respectivo helado.
+Ellos quieren comprar el helado que puedan con la plata que tienen, asi que veamos como podemos ayudarlo.
+
+Roberto tiene $1.5 usb.
+Pedro tiene $1.7 usb.
+Cofla tiene $3.
+
+los precios de los helados son los siguientes:
+
+palito de helado de agua $ 6.6 USD
+palito de helado de crema $ 3 USD
+bombom helado marda heladito $ 1 USD
+bombom helado marda helito $ 1.6 USD
+bombom helado marda helaso $ 1.7 USD
+postrecito de helado con confites $ 1.8 USD
+pote de 1/4 kl $ 2.9 USD
+
+*CREAR SOLUCIONES:
+
+_PEDIRLES QUE INGRESEN EL MONTO QUE TIENEN Y MOSTRARLES EL HELADO MAS CARO.
+_SI HAY DOS O MAS CON EL MISMO PRECIO, MOSTRAR AMBOS.
+_COFLA QUIERE SABER CUANTO ES EL VUELTO.
+
+===========CODIGO JS==============================
+
+
+
+
+// Cofla
+
+dineroCofla = prompt("¿cuanto dinero tienes Cofla?");
+dineroRoberto = prompt("¿cuanto dinero tienes Roberto?");
+dineroPedro = prompt("¿cuanto dinero tienes Pedro?"); 
+
+
+if (dineroCofla >= 0.6 && dineroCofla < 1) {
+	alert("Cofla; comprate el helado de agua");
+}
+
+else if (dineroCofla >= 1 && dineroCofla < 1.6) {
+	alert("Cofla; comprate el helado de crema");
+}
+
+else if (dineroCofla >= 1.6 && dineroCofla < 1.7) {
+	alert("Cofla; comprate el helado de heladito");
+}
+
+else if (dineroCofla >= 1.7 && dineroCofla < 1.8) {
+	alert("Cofla; comprate el helado de helito");
+}
+
+else if (dineroCofla >= 1.8 && dineroCofla < 2.9) {
+	alert("Cofla; comprate el helado de helaso");
+} 
+
+else if (dineroCofla >= 2.9) {
+	alert("Cofla; comprate el helado con confites o el pote de 1/4 kl");
+} 
+
+else  {
+	alert("Cofla; lo siento inserte coin");
+}
+
+
+
+// roberto
+
+
+
+dineroRoberto = prompt("cuanto dinero tiene Roberto");
+
+if (dineroRoberto >= 0.6 && dineroRoberto < 1) {
+	alert("Roberto; comprate el helado de agua");
+}
+
+else if (dineroRoberto >= 1 && dineroRoberto < 1.6) {
+	alert("Roberto; comprate el helado de crema");
+}
+
+else if (dineroRoberto >= 1.6 && dineroRoberto < 1.7) {
+	alert("Roberto; comprate el helado de heladito");
+}
+
+else if (dineroRoberto >= 1.7 && dineroRoberto < 1.8) {
+	alert("Roberto; comprate el helado de helito");
+}
+
+else if (dineroRoberto >= 1.8 && dineroRoberto < 2.9) {
+	alert("Roberto; comprate el helado de helaso");
+} 
+
+else if (dineroRoberto >= 2.9) {
+	alert("Roberto; comprate el helado con confites o el pote de 1/4 kl");
+} 
+
+else  {
+	alert("Roberto, lo siento inserte coin");
+}
+
+
+
+// PEDRO
+
+
+dineroPedro = prompt("cuanto dinero tiene Pedro");
+
+if (dineroPedro >= 0.6 && dineroPedro < 1) {
+	alert("pedro; comprate el helado de agua");
+}
+
+else if (dineroPedro >= 1 && dineroPedro < 1.6) {
+	alert("pedro; comprate el helado de crema");
+}
+
+else if (dineroPedro >= 1.6 && dineroPedro < 1.7) {
+	alert("pedro; comprate el helado de heladito");
+}
+
+else if (dineroPedro >= 1.7 && dineroPedro < 1.8) {
+	alert("pedro; comprate el helado de helito");
+}
+
+else if (dineroPedro >= 1.8 && dineroPedro < 2.9) {
+	alert("pedro; comprate el helado de helaso");
+} 
+
+else if (dineroPedro >= 2.9) {
+	alert("pedro; comprate el helado con confites o el pote de 1/4 kl");
+} 
+
+else  {
+	alert("Pedro; lo siento inserte coin");
+}
+
+-------------------------------------------------------------------------------------------
+
+#CODIGO DEL EJERCICIO DE JAVASCRIPT SIMPLIFICADO:
+
+"use strict"
+
+const definirCompra = (n) => {
+	let din = prompt(´Dinero de ${n}´)
+	if (din >= 0.6 && din < 1) return (´${n}: helado de agua´)
+	if (din >= 1 && din < 1.6) return (´${n}: helado de crema´)
+	if (din >= 1.6 && din < 1.7) return (´${n}: helado de heladito´)
+	if (din >= 1.7 && din < 1.8) return (´${n}: helado de helito´)
+	if (din >= 1.8 && din < 2.9) return (´${n}: helado de helaso´)
+	if (din >= 2.9) return (´${n}:´helado de confites o pote de 1/4 kl´)
+	else return (´${n}; no te alcanza para ningun helado´) 
+}
+
+console.log(definirCompra("Cofla"))
+console.log(definirCompra("Pedro"))
+console.log(definirCompra("Roberto"))
+
+================================================================================================================================
+
+\n	Nueva línea
+\r	En Windows, los archivos de texto usan una combinación de dos caracteres \r\n para representar un corte de línea, mientras que en otros SO es simplemente ‘\n’. Esto es por razones históricas, la mayoría del software para Windows también reconoce ‘\n’.
+\', \", \`	Comillas
+\\	Barra invertida
+\t	Tabulación
+\b, \f, \v	Retroceso, avance de formulario, tabulación vertical – Se mencionan para ser exhaustivos. Vienen de muy viejos tiempos y no se usan actualmente (puedes olvidarlos ya).
+
+-------------------------------------------------------------------------------------------
+
+bucle
+
+for (var i = 0 ; i <= 100; i++) {
+  console.log(i)
+}
+
+bucle while
+
+
+
+-------------------
+
+function imprime1an (n) {
+   for (var i= 0 ; i <= n; i++) {
+   console.log(i);
+ }
+}
+
+bucle adentro de otro: 
+
+numeros pares;
+
+function imprime1an (n) {
+   for (var i= 0 ; i <= n; i++) {
+    if (i % 2 === 0 ) {
+     console.log(i)
+  }
+ }
+}
+imprime1an (100);
+====================
+bucle anidados:
+
+function imprime1an (n) {
+   for (var i= 0 ; i <= n; i++) {
+   if (i % 2 === 0 ) {
+    console.log(i)
+  }
+   if (i > 200){
+    for( var j = 0; j < 10; j++){
+   console.log(j);
+   }
+   return;
+  }
+ }
+}
+
+ imprime1an (201);
+=================================
+
+bucle anidado:
+
+function matriz (n, m) {
+ for (var i = 0; i < n; i++) {
+  for (var j = 0; j < n; j++) {
+    console.log (i + "," + j);
+  }
+ }
+}
+
+===============================
+
+fuction matriz(n,m) {
+ var j = 0;
+ var i = 0;
+ while (j < n) {
+  while (j < m) {
+    console.log(i.j);
+       j = j + 1;
+   }
+    j = 0
+    i = i + 1;
+ }
+}   
+------------------------
+for es un bucle repetitivo
+
+Existe la logoca booleana, los operadores logicos son como operadores matematico, pero para tipos datos
+booleeanos, un operador recive un operando y segun el operador y valor de los resultado,te devuelve
+un valor.
+
+
+
+--------------------------------------------
+ *arrays:
+
+definición y usos:
+El objeto Array de JavaScript es un objeto global que es usado en la construcción de arrays, 
+que son objetos tipo lista de alto nivel.
+
+forma de crear un arrays:
+
+ frutas =["banana","manzana", "pera"];
+
+ document.write(frutas[0]);--->de esta manera seleccionamos el elemento q queremos mostrar.
+-----------------------------------------
+frutas =["banana","manzana", "pera"];
+
+ document.write(frutas[19]) ---------> con este ejemplo nos devuelve un resultado undefined.
+------------------------------------------
+
+* arrrays asociativos:
+
+definicion
+Un array asociativo es un tipo "avanzado" de array: permite agrupar una serie de elementos del mismo tipo.
+
+sintaxis y usos:
+
+let pc1 = {
+	nombre : "devalue",
+	procesador : "intel i7",
+	ram : "16gb",
+	espacio: "1tb"
+};
+
+let nombre = pc1 ["nombre"];
+let precesador = pc1 ["procesador"];
+let ram = pc1 ["ram"];
+let espacio = pc1 ["espacio"];
+
+frase = `el nombre de mi pc es: <b>${nombre}</b> <br>
+         el procesador es: <b>${precesador}</b> <br>
+         la memoria ram es: <b>${ram}</b> <br>
+         el espacio en disco es: <b>${espacio}</b>`;
+
+document.write(frase); 
+----------------------------------------------------------------
+
+*bucles e interación:
+
+_definicion y usos_
+
+sentencia while
+
+let numero = 0;
+
+while (numero < 6) {
+
+	numero++;
+
+	document.write(numero + "<br>");
+	
+}
+-----------------------------------
+sentencia do while
+
+let numero = 0;
+
+do {
+
+	numero++;
+
+	document.write(numero + "<br>");
+
+}
+
+while (numero <= 6);
+------------------------------------------
+let numero = 0;
+
+do {
+	document.write(numero + "<br>");
+
+	numero++;
+
+}
+
+while (numero <= 6);
+------------------------------------------------------
+sentencia for(declaraacion,condicion e aumento o decremento)
+
+for (let i = 0; i < 6; i++ ) {
+	document.write(i + "<br>")
+}
+
+decremento
+
+for (let i = 6; i >= 0; i-- ) {
+	document.write(i + "<br>")
+}
+
+en este ejemplo de la declara e inicializa por fuera
+
+let i = 6;
+
+for (i; i >= 0; i-- ) {
+	document.write(i + "<br>")
+}
+
+document.write(i);
+------------------------------------------
+sentencia for in nos muestra la posicion en la que se encuentra el elemento.
+sentencia for of nos muestra el valor de esos elementos.
+
+let animales = ["perro", "gato", "triceratops"];
+
+for (animal in animales){
+   document.write(animal + "<br>");
+}
+
+document.write("<br>");
+
+for (animal of animales){
+   document.write(animal + "<br>");
+}
+-----------------
+sentencia break:
+
+let numero = 0;
+
+while (numero < 100){
+	numero++;
+	document.write(numero);
+	if(numero == 10){
+		break;
+	} 
+}
+
+document.write("fin");
+--------------------------------
+sentencia label :saltea la iteracion de todo el bucle.
+
+array1 = ["maria", "jorgelina", "eusebio"]
+array2 = ["jose", "tinglina", array1, "claudia"]
+
+fordecano:
+for (array in array2) {
+	if (array == 2) {
+		for (let array of array1){
+			document.write(array + "<br>")
+			break fordecano;
+		}
+	} else {
+		document.write(array2[array] + "<br>")
+	}
+-------------------------------------------------------------
+sentencia continue: con este ejemplo se saltea el numero.
+
+for (let i = 0; i < 20; i++) {
+	
+	if (i == 12) {
+		continue;
+	}
+	document.write(i + "<br>");
+}
+
+
+=================================================
+
+#FUNCIONES:
+
+*definicion y usos:
+Es una porcion de codigo.
+
+function saludar() {
+	respuesta = prompt("¡hola decano! ¿como fue tu día?");
+	if (respuesta == "bien") {
+		alert("me alegro");
+	} else {
+		alert("que desgracia")
+	}
+}
+
+saludar();
+
+*forma de crear funciones
+*return:
+
+function saludar() {
+	alert("hola");
+	return "la función se ejecuto";
+}
+
+let saludo = saludar();
+
+document.write(saludo);
+
+#Parametros:
+
+*SON VARIABLES QUE SE DECLARAN Y CREAN EN UN FUNCIÓN.
+
+function suma(num1, num2) {
+	let res = num1 + num2;
+	document.write(res);
+	document.write("<br>");
+}
+
+suma(12,32);
+suma(55,52);
+--------------------------------
+
+function suma(num1, num2) {
+	let res = num1 + num2;
+	return res;
+}
+
+let resultado = suma(20,55);
+
+let resultado2 = suma(20,55);
+
+document.write(resultado + "<br>");
+document.write(resultado2 + "<br>");
+-------------------------------------------------
+
+function saludar (nombre){
+	let frase = `¡hola ${nombre}! ¿como estas?`;
+	document.write(frase);
+}
+
+saludar("decano");
+-------------------------------
+#scope:
+
+El scope de una variable hace referencia al lugar donde va a vivir esta, o podrá ser accesible, 
+en JavaScript tenemos varias opciones: global, local y bloque.
+
+*let es regional:
+
+function saludar (nombre){
+	let frase = `¡hola ${nombre}! ¿como estas?`;
+	document.write(frase);
+}
+
+saludar("decano"); 
+---------------------------
+
+*var es global:
+
+function saludar (nombre){
+	frase = `¡hola ${nombre}! ¿como estas?`;
+	document.write(frase);
+}
+
+saludar("decano"); 
+---------------------------
+
+#funciones flecha:
+
+function saludar(nombre){
+	let frase = `¡hola ${nombre}! ¿como estas?`;
+	document.write(frase);
+}
+
+saludar("decano"); 
+--------------------------------------------------------
+const saludar = function(nombre){
+	let frase = `¡hola ${nombre}! ¿como estas?`;
+	document.write(frase);
+}
+
+saludar("decano"); 
+---------------------------------------------------------
+const saludar = (nombre)=>{
+	let frase = `¡hola ${nombre}! ¿como estas?`;
+	document.write(frase);
+}
+
+saludar("decano"); 
+------------------------------------
+
+*manera simplificada:
+
+const saludar = nombre=>{
+	document.write("hola como estas " + nombre);
+}
+
+saludar("decano"); 
+======================================================================================
+
+# CREAR SOLUCIONES
+
+*un joven muy afortunado logro ganarel primer premio de la loteria.
+Este mismo compro una maquina que deja pasar a solamente mayores de edad.
+
+dejar pasar solo a maores de edad
+la primera persona que entre despues de las 2 am, no paga.
+
+ let free = false;
+
+const validarCliente = (time)=>{
+	let edad = prompt("¿Cual es tu edad?");
+	if (edad > 18) {
+		if (time >= 2 && time < 7 && free == false) {
+			alert("podes pasar gratis porque sos la primer persona despues de las 2 AM") ;
+			free = true;
+		} else {
+			alert(`son las ${time}:00Hs y podes pasar, pero tenes que pagar la entrada`);
+		}
+
+	} else {
+		alert("mira papu, sos menor de edad por ende no vas a pasar, MAQUINOLA");
+	}
+}
+
+
+validarCliente(23);
+validarCliente(24);
+validarCliente(0.2);
+validarCliente(0.6);
+validarCliente(1);
+validarCliente(2);
+validarCliente(2.4);
+validarCliente(3);
+-----------------------------------------------------------------------------------------------------------
+` backtick
+-----------------
+
+presente y ausentes:
+
+let cantidad = prompt ("¿cuanto alumnos son?");
+let alumnosTotales = [];
+
+for (i = 0; i < cantidad; i++){
+	alumnosTotales[i] = [prompt("nombre de alumno" + (i + 1)),0];
+
+}
+
+const tomarAsistencia = (nombre,p)=>{
+	let presencia = prompt(nombre);
+    if (presencia == "p" || presencia == "p") {
+    	alumnosTotales[p][1]++;
+    } else {}
+}
+
+for (i = 0; i < 30; i++){
+	for(alumno in alumnosTotales){
+		tomarAsistencia(alumnosTotales[alumno][0],alumno)
+	}
+}
+
+for(alumno in alumnosTotales){
+	let resultado = `${alumnosTotales[alumno][0]}:<br>
+    _______Presentes: ${alumnosTotales[alumno][1]} <br>
+    _______Ausencias: ${30 - alumnosTotales[alumno][1]}`
+    if (30 - alumnosTotales[1] > 18) {
+    	resultado+= "<b style =`color:red`>rerpbado por </b><br><br>";
+    } else {
+    	resultado+= "<br><br>";
+    } 
+    document.write(resultado);
+}
+---------------------------------------------------
+
+# OPERACIONCIONES:
+
+const sumar = (num1,num2)=>{
+	return parseInt(num1) + parseInt(num2);
+}
+
+
+
+const restar = (num1,num2)=>{
+	return parseInt(num1) - parseInt(num2);
+}
+
+
+
+const dividir = (num1,num2)=>{
+	return parseInt(num1) / parseInt(num2);
+}
+
+
+
+const multiplicar = (num1,num2)=>{
+	return parseInt(num1) * parseInt(num2);
+}
+
+alert("¿que operacíon deseas realizar?");
+let operacíon = prompt("1: suma, 2: resta, 3:división, 4: multiplicación")
+
+if (operacíon == 1) {
+	let numero1 = prompt("primer numero para sumar");
+	let numero2 = prompt("segundo numero para sumar");
+	resultado = sumar(numero1,numero2);
+	alert(`tu resultado es ${resultado}`);
+} else if (operacíon == 2) {
+	let numero1 = prompt("primer numero para restar");
+	let numero2 = prompt("segundo numero para sumar");
+	resultado = restar(numero1,numero2);
+	alert(`tu resultado es ${resultado}`);
+} else if (operacíon == 3) {
+	let numero1 = prompt("primer numero para dividir");
+	let numero2 = prompt("segundo numero para sumar");
+	resultado = dividir(numero1,numero2);
+	alert(`tu resultado es ${resultado}`);
+} else if (operacíon == 4) {
+	let numero1 = prompt("primer numero para multiplicar");
+	let numero2 = prompt("segundo numero para sumar");
+	resultado = multiplicar(numero1,numero2);
+	alert(`tu resultado es ${resultado}`);
+} else {
+	alert("no se a encontrado tu operación");
+}
+
+------------------------------------------
+==================================================================================================================
+
+# PROGRAMACIÓN ORIENTADA A OBJETOS:
+
+*definición y usos:
+ES UN PARADIGMA DE LA PROGRAMACION QUE INTENTA 
+ACTUALIZAR LA FORMA EN LA QUE PROGRAMAMOS, HACIENDO QUE PODAMOS PROGRAMAR
+OBJETOS COMO LO ACEMOS EN LA VIDA REAL.
+UN PARADIGMA ES UNA DE LAS TANTAS FORMAS QUE TENEMOS DE CREAR SOLUCIONES
+
+*instalación
+
+# CONCEPTOS BASICOS DE POO:
+
+*CLASE:PLANTILLA PARA CREAR OBJETOS.
+*OJETOS: SON RESULTADOS DE LA CLASE.
+*ATRIBUTO:SON LAS PROPIEDADES QUE TIENEN LOS OBJETOS.
+*CONSTRUCTOR: ES UNA PARTICULARIDAD Q TIENEN LAS CLASES TENIENDO UNA
+FUNCION OBLIGATORIA.
+
+#En este ejemplo podemos ver como se aplican los conceptos 
+CLASE,OBJETO, ATRIBUTO y CONSTRUCTOR.
+
+class animal {
+	constructor(especie,edad,color){
+		this.especie = especie
+		this.edad = edad
+		this.color = color
+		this.info = `soy un ${this.especie}, tengo ${this.edad} años
+		y soy de color${this.color}`;
+	}
+}
+
+
+let perro = new animal("perro", 5, " marron");
+let michi = new animal("michi", 5, " atigrada");
+let loro = new animal("loro", 5, " verde");
+
+document.write(perro.info + "<br>");
+document.write(michi.info + "<br>");
+document.write(loro.info + "<br>");
+
+*METODO: SON LAS COSAS QUE PUEDE HACER NUESTRO OBJETO.
+# En este ejemplo podemos ver como se aplicaca el concepto METODO.
+
+class animal {
+	constructor(especie,edad,color){
+		this.especie = especie
+		this.edad = edad
+		this.color = color
+		this.info = `soy un ${this.especie}, tengo ${this.edad} años
+		y soy de color${this.color}`;
+	}
+	verInfo(){
+		document.write(this.info + "<br>"); ---->metodo por dentro de la función.
+	}
+}
+
+
+let perro = new animal("perro", 5, " marron");
+let michi = new animal("michi", 5, " atigrada");
+let loro = new animal("loro", 5, " verde");
+
+// document.write(perro.info + "<br>");
+// document.write(michi.info + "<br>");
+// document.write(loro.info + "<br>");
+
+perro.verInfo();
+michi.verInfo();
+loro.verInfo();
+
+
+*INTANCIACIÓN: ES CUANDO LA CLASE ESTA INSTANCIADA.
+
+#CARACTERISTICAS DE LA POO:
+
+*ABSTRACIÓN: es intentar redurcir lo que mas se pueda las 
+caracteristicas de un objeto.
+
+*MODULARIDAD: es la capacidad de resolver un problema separandolos
+por partes.
+
+*ENCAPSULADO: consiste en que todos los datos esten privados.
+
+*POLIMORFISMO: consiste en ver como un objeto se comporta de manera
+distinta ante el mismo metodo. 
+
+#En este ejemplo se aplica el polimorfismo:
+
+
+class animal {
+	constructor(especie,edad,color){
+		this.especie = especie
+		this.edad = edad
+		this.color = color
+		this.info = `soy un ${this.especie}, tengo ${this.edad} años
+		y soy de color${this.color}`;
+	}
+	verInfo(){
+		document.write(this.info + "<br>");
+	}
+	ladrar(){
+		if (this.especie == "perro") {
+			document.write("¡waw!" + "<br>")
+		} else {
+			document.write("no puede ladrar" + "<br>")
+		}
+	}
+}
+
+
+let perro = new animal("perro", 5, " marron");
+let michi = new animal("michi", 5, " atigrada");
+let loro = new animal("loro", 5, " verde");
+
+// document.write(perro.info + "<br>");
+// document.write(michi.info + "<br>");
+// document.write(loro.info + "<br>");
+
+perro.ladrar();
+michi.ladrar();
+loro.ladrar();
+
+#OTROS CONCEPTOS DE POO:
+
+*HERENCIA consiste en crear una clase que pueda tomar todo
+lo que pueda hacer la misma y sus propiedades (extends).
+
+*ejemplo:
+
+class Animal {
+	constructor(especie,edad,color){
+		this.especie = especie
+		this.edad = edad
+		this.color = color
+		this.info = `soy un ${this.especie}, tengo ${this.edad} años
+		y soy de color${this.color}`;
+	}
+	verInfo(){
+		document.write(this.info + "<br>");
+	}
+}
+
+	class Perro extends Animal {
+		constructor(especie,edad,color,raza){
+			super(especie,edad,color);
+			this.raza = raza;
+		}
+}
+
+
+
+const perro = new Perro("perro", 5, " marron");
+const michi = new Animal("michi", 5, " atigrada");
+const loro = new Animal("loro", 5, " verde");
+
+
+perro.verInfo();
+michi.verInfo();
+loro.verInfo();
+
+
+*METODOS ESTATICOS static:
+
+*Es un metodo que no necesita que la clase se 
+defina para poder ser creado.
+
+#ejemplo:
+
+class Animal {
+	constructor(especie,edad,color){
+		this.especie = especie
+		this.edad = edad
+		this.color = color
+		this.info = `soy un ${this.especie}, tengo ${this.edad} años
+		y soy de color${this.color}`;
+	}
+	verInfo(){
+		document.write(this.info + "<br>");
+	}
+}
+
+	class Perro extends Animal {
+		constructor(especie,edad,color,raza){
+			super(especie,edad,color);
+			this.raza = raza;
+		}
+		static ladrar(){
+			alert("¡woow! ");
+		}
+}
+
+
+
+const michi = new Animal("michi", 5, " atigrada");
+const loro = new Animal("loro", 5, " verde");
+
+
+Perro.ladrar();
+michi.verInfo();
+loro.verInfo();
+
+*METODOS ACESORES(GETTERS, SETTERS)
+
+#getters son para obtener un valor:
+
+class Animal {
+	constructor(especie,edad,color){
+		this.especie = especie
+		this.edad = edad
+		this.color = color
+		this.info = `soy un ${this.especie}, tengo ${this.edad} años
+		y soy de color${this.color}`;
+	}
+	verInfo(){
+		document.write(this.info + "<br>");
+	}
+}
+
+	class Perro extends Animal {
+		constructor(especie,edad,color,raza){
+			super(especie,edad,color);
+			this.raza = null;
+		}
+		set setRaza(newName){
+			this.raza = newName;
+		}
+		get getRaza(){
+			return this.raza;
+		}
+}
+
+
+const perro = new Perro("perro", 5, " marron");
+const michi = new Animal("michi", 5, " atigrada");
+const loro = new Animal("loro", 5, " verde");
+
+
+perro.setRaza = "lola ";
+document.write(perro.getRaza);
+
+#setters son para modificarlo o definirlos:
+
+class Animal {
+	constructor(especie,edad,color){
+		this.especie = especie
+		this.edad = edad
+		this.color = color
+		this.info = `soy un ${this.especie}, tengo ${this.edad} años
+		y soy de color${this.color}`;
+	}
+	verInfo(){
+		document.write(this.info + "<br>");
+	}
+}
+
+	class Perro extends Animal {
+		constructor(especie,edad,color,raza){
+			super(especie,edad,color);
+			this.raza = null;
+		}
+		set modificarRaza(newName){
+			this.raza = newName;
+		}
+}
+
+
+const perro = new Perro("perro", 5, " marron");
+const michi = new Animal("michi", 5, " atigrada");
+const loro = new Animal("loro", 5, " verde");
+
+
+perro.modificarRaza = "lola ";
+document.write(perro.raza)
+
+===================================================================================
+
+# CREAR SOLUCIONES:
+
+*Cofla quiere commprar un celular:
+
+
+class Celular {
+	constructor(color,peso,rdp,rdc,ram){
+		this.color = color;
+		this.peso = peso;
+		this.resoluciónDePantalla = rdp;
+		this.resoluciónDeCamara = rdc;
+		this.memoriaRam = ram;
+		this.encendido = false;
+	}
+	presionarBotonEncendido(){
+		if (this.encendido == false) {
+			alert("celular prendido");
+			this.encendido = true;
+		} else {
+			alert("celular apagado")
+		}
+	}
+	reiniciar(){
+		if (this.encendido == true) {
+			alert("reniciar celular");
+		} else {
+			alert("el celular esta apagado");
+			this.encendido = false;
+		}
+	}
+	tomarFoto(){
+		alert(`foto tomada: ${this.resoluciónDeCamara}`)
+	}
+	grabarVideo(){
+		alert(`grabando video en: ${this.resoluciónDeCamara}`)
+	}
+
+}
+
+celular1 = new Celular("rojo","150","5","full hd","2gb");
+celular1.presionarBotonEncendido();
+celular1.tomarFoto();
+celular1.grabarVideo();
+celular1.reiniciar();
+celular1.presionarBotonEncendido();
+
+---------------------------------------------------
+
+
+#crear soluciones cofla quiere 3 celulares:
+
+
+class Celular {
+	constructor(color,peso,tamaño,rdc,ram){
+		this.color = color;
+		this.peso = peso;
+		this.tamaño = tamaño;
+		this.resoluciónDeCamara = rdc;
+		this.memoriaRam = ram;
+		this.encendido = false;
+	}
+	presionarBotonEncendido(){
+		if (this.encendido == false) {
+			alert("celular prendido");
+			this.encendido = true;
+		} else {
+			alert("celular apagado")
+		}
+	}
+	reiniciar(){
+		if (this.encendido == true) {
+			alert("reniciar celular");
+		} else {
+			alert("el celular esta apagado");
+			this.encendido = false;
+		}
+	}
+	tomarFoto(){
+		alert(`foto tomada: ${this.resoluciónDeCamara}`)
+	}
+	grabarVideo(){
+		alert(`grabando video en: ${this.resoluciónDeCamara}`)
+	}
+	mobileInfo(){
+		return `
+		color: <b>${this.color}</b></br>
+		peso: <b>${this.peso}</b></br>
+		tamaño: <b>${this.tamaño}</b></br>
+		Resolución de video:<b>${this.resoluciónDeCamara}</b></br>
+		Memoria Ram: <b>${this.memoriaRam}</b></br>
+		`;
+	}
+}
+
+celular1 = new Celular("rojo","150g","5","hd","2gb");
+celular2 = new Celular("negro","200g","4.3","hd","3bg");
+celular3 = new Celular("blanco","100g","3.2","hd","4gb");
+
+
+document.write(`
+	${celular1.mobileInfo()} <br>
+	${celular2.mobileInfo()} <br>
+	${celular3.mobileInfo()} <br>
+	`)
+
+====================================================
+# celulares de alta gama:
+
+
+
+class Celular {
+	constructor(color,peso,tamaño,rdc,ram){
+		this.color = color;
+		this.peso = peso;
+		this.tamaño = tamaño;
+		this.resoluciónDeCamara = rdc;
+		this.memoriaRam = ram;
+		this.encendido = false;
+	}
+	presionarBotonEncendido(){
+		if (this.encendido == false) {
+			alert("celular prendido");
+			this.encendido = true;
+		} else {
+			alert("celular apagado")
+		}
+	}
+	reiniciar(){
+		if (this.encendido == true) {
+			alert("reniciar celular");
+		} else {
+			alert("el celular esta apagado");
+			this.encendido = false;
+		}
+	}
+	tomarFoto(){
+		alert(`foto tomada: ${this.resoluciónDeCamara}`)
+	}
+	grabarVideo(){
+		alert(`grabando video en: ${this.resoluciónDeCamara}`)
+	}
+	mobileInfo(){
+		return `
+		color: <b>${this.color}</b></br>
+		peso: <b>${this.peso}</b></br>
+		tamaño: <b>${this.tamaño}</b></br>
+		Memoria Ram: <b>${this.memoriaRam}</b></br>
+		Resolución de video:<b>${this.resoluciónDeCamara}</b></br>
+		`;
+	}
+}
+
+class celularAltaGama extends Celular{
+	constructor(color,peso,tamaño,rdc,ram,rdce){
+		super(color,peso,tamaño,rdc,ram);
+		this.resoluciónDeCamaraExtra = rdce
+	}
+	grabarVideoLento(){
+		alert("estas grabando lento");
+	}
+	reconocimientoFacial(){
+		alert("vamos a iniciar un reconocimiento facial");
+	}
+	InfoAltaGama(){
+		return this.mobileInfo() + `resolución de cmara Extra: ${this.resoluciónDeExtra}`
+	}
+}
+
+// celular1 = new Celular("rojo","150g","5","hd","2gb");
+// celular2 = new Celular("negro","200g","4.3","hd","3bg");
+// celular3 = new Celular("blanco","100g","3.2","hd","4gb");
+
+celular1 = new celularAltaGama("rojo","150g","5","4k","2gb","full hd");
+celular2 = new celularAltaGama("negro","200g","6","4k","3bg","hd");
+
+document.write(`
+	${celular1.mobileInfo()} <br>
+	${celular2.mobileInfo()} <br>
+	`)
+-------------------------------------------------------------
+
+#Crear soluciones:
+app de descarga
+cantidad de descarga y puntuación
+app debe instalar,abrir,cerrar y desintalar.
+
+class App{
+	constructor(descargas,puntación,peso){
+		this.descarga = descargas;
+		this.puntación = puntación;
+		this.peso = peso;
+		this.iniciada = false;
+		this.instalada = false;
+	}
+    instalar(){
+		if (this.instalada == false) {
+			this.instalada = true;
+			alert("app instalada correctamente");
+		}
+	}
+	desinstalar(){
+		if (this.instalada == true) {
+			this.instalada = false;
+			alert("app desinstalada correctamente");
+		}
+	}
+	abrir(){
+		if (this.iniciada == false && this.instalada == true) {
+			this.iniciada = true;
+			alert("app iniciada");
+		}
+	}
+	cerrar(){
+		if (this.iniciada == true && this.instalada == true) {
+			this.iniciada = false;
+			alert("app cerrada");
+		}
+	}
+}
+
+
+app = new App("16.666","5 estrellas","900mb")
+
+app.instalar();
+app.abrir();
+app.cerrar();
+app.desinstalar();
+---------------------------------------------------------------------------
+
+class App{
+	constructor(descargas,puntación,peso){
+		this.descarga = descargas;
+		this.puntación = puntación;
+		this.peso = peso;
+		this.iniciada = false;
+		this.instalada = false;
+	}
+    instalar(){
+		if (this.instalada == false) {
+			this.instalada = true;
+			alert("app instalada correctamente");
+		}
+	}
+	desinstalar(){
+		if (this.instalada == true) {
+			this.instalada = false;
+			alert("app desinstalada correctamente");
+		}
+	}
+	abrir(){
+		if (this.iniciada == false && this.instalada == true) {
+			this.iniciada = true;
+			alert("app iniciada");
+		}
+	}
+	cerrar(){
+		if (this.iniciada == true && this.instalada == true) {
+			this.iniciada = false;
+			alert("app cerrada");
+		}
+	}
+	appInfo(){
+		return`
+		Descargas: <b>${this.descargas}</b></br>
+		Puntuación: <b>${this.puntuación}</b></br>
+		Peso: <b>${this.peso}</b></br>
+		`
+	}
+}
+
+
+app = new App("13.666","5 estrellas","100mb");
+app2 = new App("12.666","2 estrellas","200mb");
+app3 = new App("11.666","3 estrellas","300mb");
+app4 = new App("15.666","1 estrellas","400mb");
+app5 = new App("14.666","4 estrellas","500mb");
+app6 = new App("17.666","5 estrellas","600mb");
+app7 = new App("16.666","5 estrellas","700mb");
+
+
+document.write(`
+	${app.appInfo()} <br>
+	${app2.appInfo()} <br>
+	${app3.appInfo()} <br>
+	${app4.appInfo()} <br>
+	${app5.appInfo()} <br>
+	${app6.appInfo()} <br>
+	${app7.appInfo()} <br>
+	`)
+
+
+app.instalar();
+app.abrir();
+app.cerrar();
+app.desinstalar();
+
+----------------------------------------------------------------------
+======================================================================================
+
+# METODOS DE CADENAS:
+
+*CONCAT() - JUNTA DOS O MAS CADENAS Y RETORNA UNA NUEVA
+
+let cadena = "cadena de prueba";
+
+
+resultado = cadena.concat("hola");
+
+document.write(resultado)
+--------------------------------------
+
+let cadena = "cadena de prueba";
+let cadena2 = " cadena 2"
+
+resultado = cadena.concat(cadena2);
+
+document.write(resultado);
+--------------------------------------------------
+
+let cadena = new String("cadena de prueba");
+let cadena2 = " cadena 2"
+
+resultado = cadena.concat(cadena2);
+
+document.write(resultado); 
+--------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+*STARTSWITH() - SI UNA CADENA COMIENZA CON LOS CARACTERES DE OTRA CADENA, DEVUELVE TRUE, SINO DEVUELVE FALSE.
+let cadena = "cadena de prueba";
+let cadena2 = "cadena "
+
+resultado = cadena.startsWith(cadena2); --------> true;
+
+document.write(resultado);
+--------------------------------------------------------
+
+
+
+let cadena = "cadena de prueba";
+let cadena2 = " cadena"
+
+resultado = cadena.startsWith(cadena2);
+
+document.write(resultado); --------------> false;
+--------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+*ENDSWITH() - SI UN CADENA TERMINA CON LOS CARACTERES DE OTRA CADENA, DEVUELCE TRUE, SINO DEVUELVE FALSE.
+
+let cadena = "cadena de prueba";
+let cadena2 = "prueba"
+
+resultado = cadena.endsWith(cadena2);
+
+document.write(resultado); -----------> true;
+----------------------------------------------------------------
+
+let cadena = "cadena de prueba";
+let cadena2 = "prueba "
+
+resultado = cadena.endsWith(cadena2);
+
+document.write(resultado); ----------> false;
+------------------------------------------------------
+==================================================================
+
+*INCLUDES() - si una cadena puede encontrar dentro de otra cadena, devuelve true,
+de lo contrario devuelve false.
+
+let cadena = "cadena de prueba";
+let cadena2 = "prueba"
+
+resultado = cadena.includes(cadena2);
+
+document.write(resultado);  ------------> true;
+------------------------------------------------
+
+let cadena = "cadena de prueba";
+let cadena2 = "prueba "
+
+resultado = cadena.includes(cadena2);
+
+document.write(resultado); -----------> false;
+---------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+# INDEXOF : DEVUELVE EL INDICE DEL PRIMER CARACTER DE LA CADENA, SI 
+NO EXISTE DEVUELVE -1.
+
+let cadena = "cadena de prueba";
+let cadena2 = ""
+
+resultado = cadena.indexOf("prueba");
+
+document.write(resultado);
+
+*EN ESTE EJEMPLO DEVUELVE 10 POR ENCONTRARCE EN LA POSICIÓN 10
+---------------------------------------------------------
+let cadena = "cadena de prueba";
+let cadena2 = ""
+
+resultado = cadena.indexOf("prueba");
+
+document.write(cadena[0]);
+
+*EN ESTE EJEMPLO SELECCIONAMOS LA PRIMER LETRA DE UNA CADENA. 
+------------------------------------------------------------
+
+let cadena = "cadena de prueba";
+let cadena2 = ""
+
+resultado = cadena.indexOf("decano");
+
+document.write(resultado);
+
+*EN ESTE EJEMPLO DEVUEL -1 POR QUE EL CARACTER NO EXISTE.
+-----------------------------------------------------------
+=====================================================================
+
+*LASTINDEXOF() - DEVUELVE EL ULTIMO INDICE DEL PRIMER CARACTER DE LA CADENA, SI NO EXISTE, DEVUELVE -1.
+
+let cadena = "cadena de prueba decano decano decano decano decano";
+let cadena2 = ""
+
+resultado = cadena.lastIndexOf("decano");
+
+document.write(resultado);
+-------------------------------------------------------
+
+let cadena = "cadena de prueba decano decano decano decano decano";
+let cadena2 = ""
+
+resultado = cadena.lastIndexOf("decano");
+
+document.write(cadena[40] + cadena[41] + cadena[42]);
+
+*EN ESTE EJEMPLO VAMOS RECONTRUYENDO LA CADENA.
+-------------------------------------------------------------------------------------
+============================================================
+
+*PADSTART() [propuesta de estandar] - rellenar cadena al principio con los caracteres deseados.
+
+let cadena = "abc";
+let cadena2 = ""
+
+resultado = cadena.padStart(6,"a");
+
+document.write(resultado);
+
+-------------------------------------------------------
+================================================================
+
+*padEnd() [propuesta de ecma] - rellenar al final de los caracteres deseados.
+
+let cadena = "abc";
+let cadena2 = ""
+
+resultado = cadena.padEnd(6,"a");
+
+document.write(resultado);
+
+-------------------------------------------------------------------------------------
+=============================================================
+
+*repeat() - devulve la misma cadena pero repetida la cantidad.
+
+let cadena = "abc ";
+let cadena2 = ""
+
+resultado = cadena.repeat(6);
+
+document.write(resultado);
+
+------------------------------------------------------
+=========================================
+
+*split() - divide la cadena como le pedimos.
+
+let cadena = "abc,abc,abc"; 
+// let cadena2 = ""
+
+resultado = cadena.split(",");
+
+document.write(resultado);
+-------------------------------------------------------
+
+let cadena = "estas,como,estas"; 
+// let cadena2 = ""
+
+resultado = cadena.split(",");
+
+document.write(resultado[1]);
+
+*en este ejemplo nos devuelve la posición del caracter-
+--------------------------------------------------------------
+let cadena = "estas,como,estas"; 
+// let cadena2 = ""
+
+resultado = cadena.split("como");
+
+document.write(resultado[1]);
+
+*en este ejemplo nos muestra el resultado del caracter posterior a "como".
+
+-------------------------------------------------------------------
+====================================
+
+*substring() - NOS RETORNA UN PEDAZO DE LA CADENA QUE SELECCIONA.
+
+let cadena = "abcdfghij"; 
+// let cadena2 = ""
+
+resultado = cadena.substring(0,3);
+
+document.write(resultado);
+
+--------------------------------------------------
+=====================================================
+
+*tolowercase() - CONVIERTE UNA CADENA EN MINISCULA.
+
+let cadena = "ABCDEFG"; 
+// let cadena2 = ""
+
+resultado = cadena.toLowerCase();
+
+document.write(resultado);
+---------------------------------------------------------------
+=========================================
+
+*TOUPPERCASE() - CONVIERTE UNA CADENA EN MAYUSCULA
+
+let cadena = "decano hasta la muerte"; 
+// let cadena2 = ""
+
+resultado = cadena.toUpperCase();
+
+document.write(resultado);
+-----------------------------------------------------------------------
+============================================
+
+*TOSTRING() - metodo devuelve una cadena que representa un objeto.
+
+let cadena = ["decano", "lola"]; 
+// let cadena2 = ""
+
+resultado = cadena.toString();
+
+document.write(resultado);
+
+----------------------------------------------------
+=======================================================
+
+*trim() - elimina los espacios en blanco al principio y al final.
+
+let cadena = "   decano   "; 
+// let cadena2 = ""
+
+resultado = cadena.trim();
+
+document.write(resultado)
+--------------------------------------------------------------------------------------------
+=====================================================================
+
+*trimEnd() - elimina los espacios en blancos al final de una cadena.
+
+let cadena = "   decano   "; 
+// let cadena2 = ""
+
+resultado = cadena.trimEnd();
+
+document.write(resultado);
+--------------------------------------------------------------
+
+let cadena = "   decano   "; 
+// let cadena2 = ""
+
+resultado = cadena.trimEnd();
+
+document.write(resultado.length);
+
+*ESTE EJEMPLO NOS MUESTRA CUANTO ESTAPACIOS SE ELIMINARON.
+--------------------------------------------------------------------
+=================================================
+
+*trimStart() - elimina los espacios en blanco al comienzo de una cadena.
+
+let cadena = "   decano   "; 
+// let cadena2 = ""
+
+resultado = cadena.trimStart();
+
+document.write(resultado);
+---------------------------------------------------------
+============================================
+
+*valueOf() - retorna el valor primitivo de un objeto string.
+
+--------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
+#METODOS DE ARRAY 
+
+#TRANSFORMADORES
+
+*POP() - ELIMINA EL ULTIMO ELEMENTO DE UN ARRAY Y LO DEVUELVE
+
+let nombres = ["decano", "lacra", "cagada"]; 
+
+resultado = nombres.pop();
+
+document.write(resultado);
+--------------------------------------------
+
+*SHIFT() - ELIMINA EL PRIMER ELEMENTO DE UN ARRAY Y LO DEVUELVE
+
+let nombres = ["decano", "lacra", "cagada"]; 
+
+resultado = nombres.shift();
+
+document.write(resultado);
+--------------------------------------------------
+
+*PUSH() - AGREGA UN ELEMENTO AL ARRAY AL FINAL DE LA LISTA
+
+let nombres = ["decano", "lacra", "cagada"]; 
+
+document.write(nombres + "<br>");
+
+resultado = nombres.push("pelele");
+
+document.write(nombres);
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+let nombres = ["decano", "lacra", "cagada"]; 
+
+document.write(nombres + "<br>");
+
+resultado = nombres.push("pelele");
+
+document.write(resultado);
+
+#nos muestra la cantidad de elementos.
+-----------------------------------------------
+
+*REVERSE() - invierte el orden de los elementos de un array
+
+let numeros = [1,2,3,4,5]; 
+
+document.write(numeros + "<br>");
+
+numeros.reverse();
+
+document.write(numeros);
+-----------------------------------------------------------
+
+*unshift () - agrega una o mas elementos al inicio de un array y devuelve la nueva longitud del array.
+
+let numeros = [3,4,5]; 
+
+document.write(numeros + "<br>");
+
+numeros.unshift(0,1,2);
+
+document.write(numeros);
+------------------------------------------------------
+
+*sort () - ordena los elementos de un arreglo localmente y devuelve el arreglo oredenado
+
+let numeros = ["a","c","x","e","f","b"]; 
+
+document.write(numeros + "<br>");
+
+numeros.sort();
+
+document.write(numeros);
+
++los ordena de manera alfabetica
+--------------------------------------------------
+
+*splice () - cambia el contenido de un array eliminando elementos existentes y/o 
+agregando nuevos elementos
+
+let numeros = ["a","c","x","e","f","b"]; 
+
+document.write(numeros + "<br>");
+
+numeros.splice(1,3,"decano"); -------> posiciona elimina y agrega.
+
+document.write(numeros);
+
+------------------------------------------------
+
+#ACCESORES
+
+*JOIN() - UNE TODOS LOS ELEMENTOS DE UNA MATRIZ (UN OBJETO SIMILAR)
+EN UNA CADENA Y LA DEVUELVE.
+
+let numeros = ["a","c","x","e","f","b"]; 
+
+document.write(numeros + "<br>");
+
+let resultado = numeros.join(" - ");
+
+document.write(resultado);
+---------------------------------------------------------
+
+let numeros = ["a","c","x","e","f","b"]; 
+
+document.write(numeros + "<br>");
+
+let resultado = numeros.join("<br>elemento: ");
+
+document.write("elemento: " + resultado);
+------------------------------------------------------------------------
+
+*SLICE() - DEVUELVE UNA PARTE DEL ARRAY DENTRO DE UN NUEVO ARRAY
+EMPEZANDO POR EL INICIO HASTA EL FIN (fin no incluido).
+
+let numeros = ["a","c","x","e","f","b"]; 
+
+document.write(numeros + "<br>");
+
+let resultado = numeros.slice(0,2);
+
+document.write(resultado);
+---------------------------------------------------
+
+* metodos ya vistos en cadenas: toString(), idexof(), lastIndex(), includes()
+
+let numeros = ["a","c","x","e","f","b"]; 
+
+document.write(numeros + "<br>");
+
+let resultado = numeros.includes("a");
+
+document.write(resultado); -------> true
+--------------------------------------------------------
+
+let numeros = ["a","c","x","e","f","b"]; 
+
+document.write(numeros + "<br>");
+
+let resultado = numeros.includes("s");
+
+document.write(resultado); -------------> false
+-----------------------------------------------------------------
+let numeros = ["a","c","x","e","f","b"]; 
+
+document.write(numeros + "<br>");
+
+let resultado = numeros.indexOf("a");
+
+document.write(resultado); ----------> posicion 2
+>>>>>>>>><>>>>>>>>>>>>>>>>>>>>>>>
+let numeros = ["a","c","x","e","f","b"]; 
+
+document.write(numeros + "<br>");
+
+let resultado = numeros.indexOf("sssss");
+
+document.write(resultado); ---------> no esta devuelve -1
+------------------------------------------------------------------
+let numeros = ["a","c","x","e","f","b"]; 
+
+document.write(numeros + "<br>");
+
+let resultado = numeros.lastIndexOf("c");
+
+document.write(resultado); ------------> se encuentra en la posicion 1
+---------------------------------------
+let numeros = ["a","c","x","e","f","b"]; 
+
+document.write(numeros + "<br>");
+
+let resultado = numeros.lastIndexOf("sssss");
+
+document.write(resultado); ---> no se encuentra
+
+================================================================
+
+#DE REPETICIÓN
+
+*filter() - crea un nuevo array con todos los elementos 
+
+let numeros = ["a","c","x","e","f","b"]; 
+
+
+numeros.filter(numero => document.write(numero + "<br>"));
+---------------------------------------------------------------------------------------------
+let numeros = ["a","c","x","eaaaa","fdd","bss"]; 
+
+resultado = numeros.filter(numero => numero.length > 4);
+
+document.write(resultado);
+-------------------------------------------------------------------------------------------
+
+*forEach() - ejecuta la función indicada una vez por cada elemento
+
+*map() -
+
+-------------------------------------------------------------o---------------------------------------------------------------------
+==========================================================================
+
+
+#OBJETOS MATH - basicos
+
+_______METODOS__________
+
+*sqrt() - devuelve la raiz cuadrada positiva de un numero.
+
+numero = Math.sqrt(25);
+
+document.write(numero);
+----------------------------------
+
+*cbrt() - devuelve la raiz cúbica de un número. 
+
+numero = Math.cbrt(25);
+
+document.write(numero);
+-----------------------------------
+
+*max() - devuelve el mayor de cero o mas numeros.
+
+numero = Math.max(25,2,213,1111,444,1);
+
+document.write(numero);
+-----------------------------------
+
+*min() - devuelve el mas pequeño de cero o más miembros.
+
+numero = Math.min(25,2,213,1111,444,1);
+
+document.write(numero);
+--------------------------------------
+
+*random() - devuelve un número pseudo-aleatorio entre 0 y 1.
+
+numero = Math.random();
+
+document.write(numero);
+---------------------------------------
+
+*round() - devuelve el valor de un número redondeado al número entero más cercano.
+
+let numero = Math.random()*100;
+
+numero = Math.round(numero);
+
+document.write(numero);
+---------------------------------------
+
+*fround() - devuelve la presentación flotatante de precisión simple más cercana de un número.
+
+let numero = Math.fround(9.998346235481256451298);
+
+document.write(numero);
+
+----------------------------------------------
+
+*floor() - devuelve el mayor entero menor qu
+e o igual a un número.
+
+let numero = Math.random()*99;
+
+numero = Math.floor(numero+1);
+
+document.write(numero);
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+for (var i = 0; i < 10000; i++) {
+	
+	let numero = Math.random()*99;
+
+    numero = Math.floor(numero+1);
+
+    document.write(numero + "<br>")
+}
+
+*NUMEROS ENTRE 0 Y 100.
+--------------------------------------------
+
+*trunc() - devuelve la parte entera del numero x, la eliminación de los digitos fraccionarios.
+
+let numero = Math.trunc(9.998346235481256451298);
+
+document.write(numero);
+---------------------------------------------
+
+________PROPIEDADES______
+
+* PI - radio de la circunferencia de ub circulo a su diametro, aprox 3.14159
+
+let numero = Math.PI;
+
+document.write(numero);
+---------------------------
+
+*SQRT1_2 - raiz cuadrada de 1/2; equivalente, 1 sobre la raiz cuadrada de 2, aprox 0-707
+
+let numero = Math.SQRT1_2;
+
+document.write(numero);
+-----------------------------
+
+*SQRT2 - raiz cuadrada de 2, aprox 1,414
+
+let numero = Math.SQRT2;
+
+document.write(numero);
+-------------------------------
+
+*E - consrante de euler, la base de los logaritmos naturales, aprox 2,718.
+
+let numero = Math.E;
+
+document.write(numero);
+---------------------------
+
+*LN2 - logaritmo de 2, aprox 0.693.
+
+let numero = Math.LN2;
+
+document.write(numero);
+-------------------------------------
+
+*LN10 - logaritmo de 10, aprox 2.303. 
+
+let numero = Math.LN10;
+
+document.write(numero);
+-----------------------------
+
+*LOG2E - logaritmo de E con base de 2, aprox 1.443. 
+
+let numero = Math.LOG2E;
+
+document.write(numero);
+
+---------------------------
+
+*LOG10E - logaritmovde E con base de 10, aprox 0.434.
+
+let numero = Math.LOG10E;
+
+document.write(numero);
+------------------------------
+======================================================
+
+_______CREAR SOLUCIONES________
+
+#funcion calculadora para sumar, restar, multiplicar y dividir.
+
+cclass Calculadora {
+	constructor(){
+	}
+sumar(num1,num2){
+	return parseInt(num1) + parseInt(num2);
+}
+restar(num1,num2){
+	return parseInt(num1) - parseInt(num2);
+}
+dividir(num1,num2){
+	return parseInt(num1) / parseInt(num2);
+}
+multiplicar(num1,num2){
+	return parseInt(num1) * parseInt(num2);
+}
+}
+
+const calculadora = new Calculadora();
+
+alert("¿Que operación deseas realizar?");
+let operacion = prompt("1: suma,  2: resta,  3: división,  4: multiplicación");
+
+if (operacion == 1) {
+	let numero1 = prompt("primer número para sumar");
+	let numero2 = prompt("segundo número para sumar");
+	resultado = calculadora.sumar(numero1,numero2);
+	alert(`tu resultado es ${resultado}`);
+}
+else if (operacion == 2) {
+	let numero1 = prompt("primer número para restar");
+	let numero2 = prompt("segundo número para restar");
+	resultado = calculadora.restar(numero1,numero2)
+	alert(`tu resultado es ${resultado}`);
+}
+else if (operacion == 3) {
+	let numero1 = prompt("primer número para dividir");
+	let numero2 = prompt("segundo número para dividir");
+	resultado = calculadora.dividir(numero1,numero2)
+	alert(`tu resultado es ${resultado}`);
+}
+else if (operacion == 4) {
+	let numero1 = prompt("primer número para multiplicar");
+	let numero2 = prompt("segundo número para multiplicar");
+	resultado = calculadora.multiplicar(numero1,numero2)
+	alert(`tu resultado es ${resultado}`);
+}
+else {
+	alert("no se ha encontrado la operación")
+}
+
+----------------------------------------------------------------------
+
+# Calcular potencias, raices cuadradas y cubicas.
+
+
+class Calculadora {
+	constructor(){
+	}
+sumar(num1,num2){
+	return parseInt(num1) + parseInt(num2);
+}
+restar(num1,num2){
+	return parseInt(num1) - parseInt(num2);
+}
+dividir(num1,num2){
+	return parseInt(num1) / parseInt(num2);
+}
+multiplicar(num1,num2){
+	return parseInt(num1) * parseInt(num2);
+}
+potenciar(num,exp){
+	let numero = num;
+	for (var i = 1; i < exp; i++) {
+		numero = numero * num;
+	}
+	return numero;
+}
+raizCuadrada(num){
+	return Math.sqrt(num);
+}
+raizCubica(num){
+	return Math.cbrt(num);
+}
+}
+
+const calculadora = new Calculadora();
+
+alert("¿Que operación deseas realizar?");
+let operacion = prompt("1: suma,  2: resta,  3: división,  4: multiplicación,  5: potenciación,  6: raíz cuadrada,  7: raíz cúbica");
+
+if (operacion == 1) {
+	let numero1 = prompt("primer número para sumar");
+	let numero2 = prompt("segundo número para sumar");
+	resultado = calculadora.sumar(numero1,numero2);
+	alert(`tu resultado es ${resultado}`);
+}
+else if (operacion == 2) {
+	let numero1 = prompt("primer número para restar");
+	let numero2 = prompt("segundo número para restar");
+	resultado = calculadora.restar(numero1,numero2)
+	alert(`tu resultado es ${resultado}`);
+}
+else if (operacion == 3) {
+	let numero1 = prompt("primer número para dividir");
+	let numero2 = prompt("segundo número para dividir");
+	resultado = calculadora.dividir(numero1,numero2)
+	alert(`tu resultado es ${resultado}`);
+}
+else if (operacion == 4) {
+	let numero1 = prompt("primer número para multiplicar");
+	let numero2 = prompt("segundo número para multiplicar");
+	resultado = calculadora.multiplicar(numero1,numero2)
+	alert(`tu resultado es ${resultado}`);
+}
+else if (operacion == 5) {
+	let numero1 = prompt("numero a potenciar");
+	let numero2 = prompt("exponente");
+	resultado = calculadora.potenciar(numero1,numero2)
+	alert(`tu resultado es ${resultado}`);
+}
+else if (operacion == 6) {
+	let numero1 = prompt("conocer la raíz cuadrada de:");
+	resultado = calculadora.raizCuadrada(numero1)
+	alert(`tu resultado es ${resultado}`);
+}
+
+else if (operacion == 7) {
+	let numero1 = prompt("conocer la raíz cúbica de:");
+	resultado = calculadora.raizCubica(numero1)
+	alert(`tu resultado es ${resultado}`);
+}
+
+else {
+	alert("no se ha encontrado la operación")
+}
+
+===============================================================================
+
+#CREAR SOLUCIONES :
+
+*CREA UNA FUNCIÓN QUE AL PASARLE COMO PARAMETRO LA MATERIA NOS 
+DEVUELVA:
+
+_PROFESOR ASIGNADO
+_EL NOMBRE DE TODOS LOS ALUMNOS
+
+_CREAR FUNSION QUE NOS DIGA EN CUANTAS CLASES ESTA COFLA.
+_NOMBRAR LAS CLASES EN LAS QUE ESRA Y LOS PRODESORES DE CADA
+UNA.
+
+const materias = {
+		fisica: ["Perez","pedro","pepito","cofla","maria"],
+		programacion: ["Dalto","pedro","juan","pepito"],
+		logica: ["Hernandez","pedro","juan","pepito","cofla","maria"],
+		quimica: ["Rodriguez","pedro","juan","pepito","cofla","maria"]
+	}
+
+const obtenerInformacion = (materia)=>{
+
+	if (materias[materia] !== undefined){
+		return [materias[materia],materia,materias];
+	} else {
+		return materias;
+	}
+}
+
+const mostrarInformacion = (materia)=>{
+	let informacion = obtenerInformacion(materia);
+
+if (informacion !== false) {
+	let profesor = informacion[0][0];
+	alumnos = informacion[0];
+	alumnos.shift();
+	document.write(`El profesor de <b>${informacion[1]}</b> es: <b style="color:red">${profesor}</b><br>
+		Los alumnos son: <b style="color:blue">${alumnos}</b><br><br>
+		`);
+}
+}
+
+const cantidadDeClases = (alumno)=>{
+	let informacion = obtenerInformacion();
+	let clasesPresentes = [];
+	let cantidadTotal = 0;
+	for (info in informacion) {
+		if (informacion[info].includes(alumno)) {
+			cantidadTotal++;
+			clasesPresentes.push(" "+ info);
+		}
+	}
+	return `<b style='color:blue'>
+	${alumno}</b> está en <b>${cantidadTotal} clases: <b style='color:green'>${clasesPresentes}</b>
+	<br><br>
+	`;
+}
+
+
+mostrarInformacion("fisica");
+mostrarInformacion("quimica");
+mostrarInformacion("programacion");
+mostrarInformacion("logica");
+
+document.write(cantidadDeClases("cofla"))
+document.write(cantidadDeClases("pedro"))
+
+================================================================================================
+
+#CONSOLE 
+
+----------funciones de registro
+
+assert() - aparece un mensaje de error en la consola si la afirmación es falsa. si la afirmación
+es verdadera, no aparece nada.
+
+console.assert(5 < 4);
+
+clear() - limpia la consola.
+
+console.clear();
+
+error() - muestra un mesaje de error en la consola web.
+
+console.error("codigo erroneo")
+
+info() - emite un mensaje informativo a la consola web. En firefox y crome, se muestra un
+pequeño iconi "i" junto a estos elementos en el registro de la consola web.
+
+console.info("exelente trabajo, tu esfuerzo va a ser reconocido por toda la empresa,
+en agradecimiento a tus logros");
+
+log() - muestra un mensaje en la consola web(o del interprete javascript), de forma
+de depuracion.
+
+console.log("exelente trabajo, tu esfuerzo va a ser reconocido por toda la empresa,
+en agradecimiento a tus logros");
+
+table() - esta funsion toma un argumento obligatorio: data, que debe ser un array o un objeto
+y un parametro adicional: columns y nos muestra una tabla en consola.
+
+console.table([2,1,1,1,"maria","deca","arg"])
+
+warn() - imprime un mensaje de advertencia en la consola web.
+
+console.warn("por favor ejecutar los cambios asignados")
+
+dir() - despliega una lista interactiva de las propiedades del objeto javascript
+especificado.
+
+console.dir([2,1,1,1,1,32,3,4])
+
+--------------FUNCIONES DE CONTEO
+
+count() - registra el numero de veces que se llama count(). Esta funsion toma como
+argumento opcional una etiqueta
+
+console.count()
+
+countReset() -  resetea el contador console.count().
+
+console.countReset()
+
+-----------------FUNCIONES DE AGRUPACIÓN
+
+GROUP() - CREA UN NUEVO GRUPO EN LINEA EN EL REGISTRO DE LA CONSOLA WEB.
+
+console.group()
+
+grupEnd() - remueve un grupo en linea en el registro de la consola web.
+
+console.groupEnd()
+
+grupCollapsed() - crea un grupo en linea pero contraido, el usuario debe expandir para
+verlo.
+
+console.groupCollapsed()
+
+----------------funsiones de temporización
+
+time() - inicia un temporizador
+
+console.time()
+
+timeEnd() - registra el valor actual de un temporizado.
+
+console.timeEnd()
+
+VM2492:1 default: 61744.3359375 ms
+console.timeLog()
+
+VM2496:1 Timer 'default' does not exist
+
+timeLog()- detiene un temporizador. 
+
+console.timeLog()
+VM2464:1 default: 9242.181884765625 ms
+
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+
+__________EJERCICIOS CON CONSOLA______________
+
+
+const materias = {
+	fisica: [90,4,3,"fisica"],
+	quimica: [33,4,3,"quimica"],
+	mat: [55,4,3,"mat"],
+	lengua: [98,4,3,"lengua"],
+	programación: [88,4,3,"programación"],
+	biologia: [99,4,3,"biologia"],
+	bbdd: [66,4,3,"bbdd"],
+	algebra: [34,4,2,"algebra"]
+}
+
+const aprobo = ()=>{
+	for (materia in materias){
+		let asistencia = materias[materia][0];
+		let promedio = materias[materia][1];
+		let trabajo = materias[materia][2]
+
+		console.log(materias[materia][3]);
+		
+		if (asistencia >= 90) {
+		    console.log("%c   Asistencia", "color:green");
+		}
+		else{
+			console.log("%c   Falta de asistencia", "color:red")
+		}
+		if (promedio >= 7) {
+			console.log("%c   Promedio en orden", "color:green")
+		}
+		else {
+			console.log("%c   Promedio desaprobado", "color:red")
+		}
+		if (trabajo >= 3) {
+			console.log("%c   Trabajos en Orden", "color:green")
+		}
+		else{
+			console.log("%c   Faltan trabajos Practicos", "color:red")
+		}
+	}
+}
+
+aprobo(); 
+
+===================================================================================================================
+
+let tp = "100 minutos hacer trabajos practicos"
+let estudio = "100 minutos hacer trabajos practicos"
+let trabajo = "100 minutos hacer trabajos practicos"
+let homework = "100 minutos hacer trabajos practicos"
+let descanso = "100 minutos hacer trabajos practicos"
+
+
+console.log("TAREAS");
+
+for (var i = 0; i < 14; i++){
+	if (i == 0 ) {
+		console.group("semana 1")
+	}
+
+	console.groupCollapsed("dias " + (i+1));
+	console.log(trabajo);
+	console.log(descanso);
+	console.log(estudio);
+	console.log(tp);
+	console.log(homework);
+	console.groupEnd();
+	if (i == 7) {
+		console.groupEnd();
+	    console.groupCollapsed("semana 2");
+	}
+}
+
+console.groupEnd();
+console.groupEnd();
+
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
+ 
+ _______________DOM______________
+
+
+ #DOM
+
+ *definoción
+ *concepti
+
+ *nodo - un nodo en el dom es cualquier etiqueta en el cuerpo, como un parrafo, el mismo body 
+ o incluso las etiquetas de una lista.
+
+_______document: el nodo document es el nodo raiz, al partir del cual derivan el resto de nodos.
+_______element: nodos nodos definidos por etiquetas html.
+_______text: el texto dentro de un nodo element se considera un nuevo nodo hijo de tipo text (texto).
+_______atribute: las atrubutos de las etiquetas definen nodos, (en javascrip no lo veremos como nodos, sino como información asociada al nodo element).
+_______comentarios y otros: los comentarios y otros elementos como las declaraciones doctype en cabeceras de los documentos html generan nodos.
+
+
+# document - metodos de selección de elmentos
+
+*getElementById() - selecciona un elemento por id.
+
+html___________
+
+<body>
+
+    <p id="parrafo">seguime decano</p>
+
+</body>
+
+js_____________
+
+parrafo = document.getElementById("parrafo");
+
+document.write(parrafo);
+
+[objeto HTMLParagraphElement]
+
+---------------------------------------------------------
+
+*getElementsByTagName() - selecciona todos los elementos que coincidan con el nombre de la etiqueta especifica.
+
+html___________
+
+<body>
+
+    <p id="parrafo">seguime decano</p>
+
+</body>
+
+js_____________
+
+parrafo = document.getElementsByTagName("p");
+
+document.write(parrafo);
+
+[objeto HTMLCollection]
+----------------------------------------------------------
+
+*querySelector() - devuelve el primer elemento que coincida con el grupo especifico de selectores.
+
+html___________
+
+<body>
+
+    <p class="parrafo">seguime decano</p>
+
+
+</body>
+
+js_____________
+
+parrafo = document.getElementsByTagName("p");
+
+document.write(parrafo);
+
+parrafo = document.querySelector(".parrafo");
+
+document.write(parrafo);
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+html___________
+
+ <body>
+
+     <p id="decano"></p>
+ 
+ </body>
+
+ js_________
+
+ parrafo = document.querySelector("#decano);
+
+document.write(parrafo);
+
+[objeto HTMLParagraphElement]
+------------------------------------------------------------
+
+*querySelectorAll() - develve todos los elementos que coincidan con el grupo especificado de selectores.
+
+HTML____________
+
+<body>
+
+    <p class="parrafo">seguime decano</p>
+    <p class="parrafo">seguime decano</p>
+    <p class="parrafo">seguime decano</p>
+    <p class="parrafo">seguime decano</p>
+    <p class="parrafo">seguime decano</p>
+    
+</body>
+
+js____________
+
+parrafo = document.querySelectorAll(".parrafo");
+
+document.write(parrafo[1]);
+
+[object HTMLParagraphElement]
+-------------------------------------------------------------
+
+# METODOS PARA DEFINIR, OBTENER Y ELIMINAR VALORES DE ATRIBUTOS.
+
+*setAtribute() - modifica el valor de un atributo
+
+_________HTMl
+
+<body>
+
+    <input type="range" class="rangoEtario">
+    <label>rango de edad</label>
+    <script src="codigo.js"></script>
+
+</body>
+
+________js
+
+const rangoEtario = document.querySelector(".rangoEtario");
+
+rangoEtario.setAttribute("type","text");
+
+-------------------------------------------------------------
+
+*getAtribute() - obtine el valor de un atributo.
+
+__________html
+
+<body>
+
+    <input type="range" class="rangoEtario">
+    <label>rango de edad</label>
+
+
+
+    <script src="codigo.js"></script>
+  </body>
+
+ ____________JS
+
+ const rangoEtario = document.querySelector(".rangoEtario");
+
+document.write(rangoEtario.getAttribute("types"));
+
+*removeAtribute() - remove el valor de un atributo.
+
+____________HTML
+
+<body>
+
+    <input type="range" class="rangoEtario">
+    <label>rango de edad</label>
+
+
+
+    <script src="codigo.js"></script>
+  </body>
+
+______________JS
+
+const rangoEtario = document.querySelector(".rangoEtario");
+
+valorDelAtributo = rangoEtario.removeAttribute("type");
+
+------------------------------------------------------------
+============================================================
+============================================================
+
+# ATRIBUTOS GLOBALES
+
+_class - lista de clases del elemento separados por espacios.
+
+_contentEditable - indica si el elemento puede ser modificable por el usuario(bool).
+
+_____HTML
+  
+  <body>
+
+    <h1 class="titulo">ESTE ES UN TITULO</h1> 
+
+    <script src="codigo.js"></script>
+  </body>
+
+_______JS
+ 
+const titulo = document.querySelector(".titulo");
+
+titulo.setAttribute("contentEditable","true");-->false
+
+---------------------------------------------------
+
+_dir - indica la direccionalidad de texte.
+
+const titulo = document.querySelector(".titulo");
+
+titulo.setAttribute("dir","ltr");--> Izquierda a derecha.
+----------------
+const titulo = document.querySelector(".titulo");
+
+titulo.setAttribute("dir","rtl"); --> de derecha a izquierda
+
+----------------------------------------------------
+
+_hidden - indica si el elemento aún no es, o ya no es, relevable.
+
+_____HTML
+
+  <body>
+
+    <h1 class="titulo" hidden="">ESTE ES UN TITULO</h1> 
+
+  </body>
+
+______js
+
+const titulo = document.querySelector(".titulo");
+
+titulo.removeAttribute("hidden");
+
+------------------------------------------------------
+_id - define un identificador unico.
+
+_style - contiene declaraciones de estilos css para ser aplicadas al elemento.
+
+_tabindex - indica si el elemento puede obtener un focus de imput.
+
+____HTML
+
+ <body>
+
+    <a class="titulo">ESTE ES UN TITULO</a> 
+
+  </body>
+
+______JS
+
+const titulo = document.querySelector(".titulo");
+
+titulo.setAttribute("tabindex","3");
+
+-------------------------------------------
+ <body>
+
+    <a class="titulo" tabindex="1">ESTE ES UN TITULO</a>
+    <a class="titulo" tabindex="3">ESTE ES UN TITULO</a>
+    <a class="titulo" tabindex="4">ESTE ES UN TITULO</a> 
+
+    <script src="codigo.js"></script>
+  </body>
+------------------------------------------------------
+
+_title - contiene un texto con información relaciona al elemento al que pertenece. 
+
+___html
+  
+  <body>
+
+    <h1 class="titulo" title="titulo decano">ESTE ES UN TITULO</h1> 
+
+  </body>
+
+___js
+
+const titulo = document.querySelector(".titulo");
+
+titulo.setAttribute("title","decano decano decano");
+
+======================================================
+# ATRIBUTOS DE LOS INPUTS
+
+_classname
+
+-------html
+
+<body>
+
+    <input type="text" class="input-normal">
+
+  </body>
+
+-------js
+
+const input = document.querySelector(".input-normal");
+
+document.write(input.className);
+
+# value _____________________________________________
+
+-------html
+
+<body>
+
+    <input type="text" class="input-normal" value="1237">
+
+  </body>
+
+-------js
+
+const input = document.querySelector(".input-normal");
+
+document.write(input.className);
+
+_type
+
+-----------js
+const input = document.querySelector(".input-normal");
+
+document.write(input.type = "color");
+
+_accept
+
+--------html
+<body>
+
+    <input type="file" class="input-normal" value="1237">
+
+    <script src="codigo.js"></script>
+  </body>
+
+  ---------js
+
+const input = document.querySelector(".input-normal");
+
+input.accept = "image/png";
+
+_form
+
+------html
+
+<body>
+
+    <form id="formulario">
+      <input type="text" name="">
+      <input type="submit" name="">
+    </form>
+
+       <input type="submit" form="formulario">
+
+  </body>
+
+_minLength
+
+-------html
+  
+  <body>
+
+    <form>
+      <input type="text" id="input-normal" minlength="4">
+      <input type="submit">
+    </form>
+
+  </body>
+
+  --------js
+
+  const input = document.querySelector(".input-normal");
+
+  input.minLength = "4";
+
+_placeholder
+
+----------html
+ <body>
+
+    <form>
+      <input type="text" class="input-normal" placeholder="hoola">
+      <input type="submit">
+    </form>
+
+    <script src="codigo.js"></script>
+  </body>
+
+------------js
+
+const input = document.querySelector(".input-normal");
+
+input.placeholder = "cara de zapato viejo";
+
+_required
+
+---------html
+
+ <body>
+
+    <form>
+      <input type="text" class="input-normal" placeholder="hoola">
+      <input type="submit">
+    </form>
+
+    <script src="codigo.js"></script>
+  </body>
+
+  -------js
+
+  const input = document.querySelector(".input-normal");
+
+  input.required = "cara de zapato viejo";
+
+======================================================
+# ATRIBUTO STYLE
+
+_usos y ejemplos.
+-------html
+
+  <body>
+
+    <h1 class="titulo">decano decano</h1>
+
+  </body>
+
+---------js
+
+const titulo = document.querySelector(".titulo");
+
+titulo.style.color = "red";
+
+_propiedad camel case.
+
+-----js
+
+const titulo = document.querySelector(".titulo");
+
+titulo.style.backgroundColor = "magenta";
+
+
+------------------------------------------------------
+============================================================================================================
+
+#### clases, classlist y metodos de classlist
+
+_defición y usos
+
+_add() - añade una clase
+
+------html
+
+  <body>
+
+    <h1 class="titulo">decano decano</h1>
+
+    <script src="codigo.js"></script>
+  </body>
+
+------js 
+
+const titulo = document.querySelector(".titulo");
+
+titulo.classList.add("grande");
+
+------------------------------------------------------
+------------------------------------------------------
+
+_remove() - remueve una clase
+
+-----------html
+
+  <body>
+
+    <h1 class="titulo">decano decano</h1>
+
+    <script src="codigo.js"></script>
+  </body>
+
+---------js
+
+const titulo = document.querySelector(".titulo");
+
+titulo.classList.remove("grande");
+
+------------------------------------------------------
+------------------------------------------------------
+
+_item() - devuelve la clase del indice especifico
+
+-------html
+
+<body>
+
+    <h1 class="titulo grande rojo decano">decano decano</h1>
+
+    <script src="codigo.js"></script>
+  </body>
+
+--------js
+
+const titulo = document.querySelector(".titulo");
+
+let valor = titulo.classList.item(3);
+
+document.write(valor);
+
+------------------------------------------------------
+------------------------------------------------------
+
+_contains() - verifica si este elemento posee o no, la clase especificada.
+
+------html
+
+<body>
+
+    <h1 class="titulo grande rojo decano">decano decano</h1>
+
+    <script src="codigo.js"></script>
+  </body>
+
+-------js
+
+const titulo = document.querySelector(".titulo");
+
+let valor = titulo.classList.contains(3);
+
+document.write(valor); -----> false
+
+-----------------
+
+const titulo = document.querySelector(".titulo");
+
+let valor = titulo.classList.contains("rojo");
+
+document.write(valor); ----> true
+
+------------------------------------------------------
+------------------------------------------------------
+
+_replace() - remplaza una clase por otra.
+
+---------html
+
+  <body>
+
+    <h1 class="titulo grande rojo decano">decano decano</h1>
+
+    <script src="codigo.js"></script>
+  </body>
+
+--------js
+
+const titulo = document.querySelector(".titulo");
+
+let valor = titulo.classList.replace("grande","chico");
+
+document.write(valor);
+
+------------------------------------------------------
+------------------------------------------------------
+
+_toggle() - si no tiene la clase especificada, la agrega, si ya la tiene, la elimina.
+
+-----html
+
+<body>
+
+    <h1 class="titulo rojo decano">decano decano</h1>
+
+    <script src="codigo.js"></script>
+  </body>
+
+--------js
+
+const titulo = document.querySelector(".titulo");
+
+nombreDeClase = "grande";
+
+let valor = titulo.classList.contains(nombreDeClase);
+
+titulo.classList.toggle("grande");
+
+>>>>>>>>>>
+
+------html
+
+<body>
+
+    <h1 class="titulo rojo decano">decano decano</h1>
+
+    <script src="codigo.js"></script>
+  </body>
+
+ >>>>>>>>
+
+-------js
+
+const titulo = document.querySelector(".titulo");
+
+let valor = titulo.classList.toggle("grande");
+
+document.write(valor); ---->true
+
+________
+
+const titulo = document.querySelector(".titulo");
+
+let valor = titulo.classList.toggle("grande");
+
+document.write(valor); ----> true
+
+-----------------------------------------------------
+
+## obtención y midificación de elementos
+
+_textContent - devuelve el texto a cualquier nodo.
+
+-------html
+
+  <body>
+
+    <h1 class="titulo">decano decano</h1>
+
+    <script src="codigo.js"></script>
+  </body>
+
+---------js
+
+const titulo = document.querySelector(".titulo");
+
+let resultado = titulo.textContent;
+
+alert(resultado); 
+
+------------------------------------------------------------------------------------------------------------
+
+_inneText - devuelve el texto visible de un node element.
+
+_outertext - devuelve el texto que se encuentra en las etiquetas html incluidas las etiquetas.
+
+
+_innerHTML - devuelve el contenido htnl de un elemento
+ 
+ ......html
+ 
+ <body>
+
+    <p class="titulo">decano <b>decano</b></p>
+
+    <script src="codigo.js"></script>
+ 
+  </body>
+
+....js
+
+const titulo = document.querySelector(".titulo");
+
+let resultado = titulo.innerHTML;
+
+alert(resultado); 
+
+------------------------------------------------------------------------------------------------------------
+
+_outerHTML - devuelve el codigo html completo de un elemento.
+
+const titulo = document.querySelector(".titulo");
+
+let resultado = titulo.outerHTML;
+
+alert(resultado); 
+
+==================================================================================================================================================================
+
+## CREACIÓN DE ELEMENTOS
+
+_createElement()
+_createTextNode()
+_createDocumentFragment()
+
+##obtención y modificación de childs(hijos)
+
+_firstChild
+_lastChild
+_firstElementChild
+_lastElementChil
+_childNodes
+_childDren
+
+## METODOS DE CHILDS
+
+_appendChild
+_replaceChild
+_removeChild
+_hasChildNode
+
+## Propiedades de padres
+
+_parentElement
+_parentNode
+
+## propiedades de siblings(hermanos)
+
+_nextSiblings
+_previousSiblings
+_nextElementSiblings
+_previousSiblings
+
+### NODO EXTRA
+
+_CLOSEST
